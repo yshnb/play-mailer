@@ -45,7 +45,7 @@ Usage
 ### Creating an email
 
 ``` scala
-  import play.modules.mailer._
+  import net.kaliber.mailer._
 
   Email(
     subject = "Test mail",
@@ -75,7 +75,7 @@ Usage
 ### Sending an email synchronously
 
 ``` scala
-  import play.modules.mailer._
+  import net.kaliber.mailer._
 
   val result:Try[Unit] = Mailer.sendEmail(email)
 
@@ -97,7 +97,7 @@ Usage
 ### Sending multiple emails synchronously
 
 ``` scala
-  import play.modules.mailer._
+  import net.kaliber.mailer._
 
   val result:Try[Seq[Try[Unit]]] = Mailer.sendEmails(email1, email2)
 
@@ -119,7 +119,7 @@ Usage
 ### Sending mail asynchonously
 
 ``` scala
-  import play.modules.mailer._
+  import net.kaliber.mailer._
 
   val result:Future[Unit] = AsyncMailer.sendEmail(email)
 
@@ -138,7 +138,7 @@ Usage
 ### Sending mails asynchonously
 
 ``` scala
-  import play.modules.mailer._
+  import net.kaliber.mailer._
 
   val result:Future[Seq[Try[Unit]]] = AsyncMailer.sendEmails(email)
 
